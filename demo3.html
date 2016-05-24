@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery层级选择器</title>
+</head>
+<body>
+    0<img src="img/1.jpg"/>
+	<div class="main">
+		<span>
+			1<img src="img/1.jpg" id="img1"/>
+		</span>
+		2<img src="img/1.jpg"/>
+	</div>
+
+	3<img src="img/1.jpg"/>
+	4<img src="img/1.jpg"/>
+
+	<div>
+		5<img src="img/1.jpg"/>
+	</div>
+
+
+	<script src="js/jquery-1.12.3.js"></script>
+	<script type="text/javascript">
+			// $(".main img").css("border", "5px solid #f00"); //后代选择器
+			 // $(".main>img").css("border", "5px solid #f00"); //子元素
+			// $(".main>img").css("border", "5px solid #f00");
+
+			// $(".main+img").css("border", "5px solid #f00");//紧邻兄弟节点
+			// $(".main").next().css("border", "10px solid #f00");
+			// $(".main~img").css("border", "10px solid #f00");//后面的兄弟节点
+			$(".main").nextAll("img").css("border", "10px solid #f00");
+
+			// $("img","div.main").css("border","1px solid red");
+			// console.log($("img", "div.main").attr("src"));
+			// $("#img1").css("border-width", "5px");
+			// $(function(){
+			// $(".main img").css("border","5px solid red");
+			// $(".main > img").css("border","5px solid blue");
+			// $(".main + img").css("border","5px solid blue");
+			// $(".main").next().css("border","5px solid blue");
+			// $(".main ~ img").css("border","5px solid blue");
+			// $(".main").nextAll("img").css("border","5px solid blue");
+			// });
+	</script>
+
+</body>
+</html>
